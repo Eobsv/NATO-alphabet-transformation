@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/NATO-alphabet-transformation.iml" filepath="$PROJECT_DIR$/.idea/NATO-alphabet-transformation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/nato-alphabet-transformation.iml" filepath="$PROJECT_DIR$/.idea/nato-alphabet-transformation.iml" />
     </modules>
   </component>
 </project>
