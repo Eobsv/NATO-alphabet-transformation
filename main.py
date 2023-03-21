@@ -2,7 +2,7 @@ import pandas
 
 
 nato_df = pandas.read_csv("nato_phonetic_alphabet.csv")
-print(nato_df)
+# print(nato_df)
 
 """ Used this as a preparation exercise to craete a dict comprehension"""
 #  Looping through dictionaries:
@@ -23,10 +23,18 @@ print(nato_df)
 # Keyword Method with iterrows()
 # {new_key:new_value for (index, row) in df.iterrows()}
 
-# TODO 1. Create a dictionary in this format: {"A": "Alfa", "B": "Bravo"} / Done
 nato_alphabet = {row.letter: row.code for (index, row) in nato_df.iterrows()}
+# print(nato_alphabet)
 
-# TODO 2. Create a list of the phonetic code words from a word that the user inputs. / Done
-user_input = input("What word would you like to see in NATO alphabet?").upper()
-input_in_nato = [nato_alphabet[letter] for letter in user_input.upper()]
-print(input_in_nato)
+
+def generate_phonetic():
+    user_input = input("What word would you like to see in NATO alphabet?").upper()
+    try:
+        input_in_nato = [nato_alphabet[letter] for letter in user_input]
+    except KeyError:
+        print("Please keep word in English alphabet")
+        generate_phonetic()
+    else:
+        print(input_in_nato)
+
+generate_phonetic()
